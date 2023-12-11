@@ -43,3 +43,7 @@ then select `Steam` and click `Add version` and select `GE-Proton` under `Compat
 ## Manual
 
 This method should work for all custom proton builds, you simply need to put your proton build inside `~/.steam/root/compatibilitytools.d/`. Make sure that the proton build you are trying to use is not in archive formats like `.zip`, `.tar.gz` and so on or else Steam won't be able to read the contents so make sure to extract it beforehand.
+
+## DISCLAIMER ABOUT PROTON-GE
+
+USING CUSTOM PROTON BUILDS MAY RE-GENERATE YOUR PROTON PREFIX SO IT IS RECOMMENDED TO BACK UP YOUR [PREFIX]() BEFORE ATTEMPTING TO USE PROTON-GE OR ANY CUSTOM PROTON BUILDS OTHERWISE IT MAY LEAD TO SAVE DATA BEING LOST. (I have personally lost a 52 hr elden ring save because of this :( )
