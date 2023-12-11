@@ -12,7 +12,7 @@ From protonup's github page:
 
 "CLI program and API to automate the installation and update of GloriousEggroll's Proton-GE"
 
-to use protonup, get it from your distro's repo or compile from source. Installation instructions can be found at [protonup's github repo](https://github.com/AUNaseef/protonup#installation)
+to use protonup, get it from your distro's repo or compile from source. Unless you Installation instructions can be found at [protonup's github repo](https://github.com/AUNaseef/protonup#installation)
 
 Usage: simply type `protonup` into your terminal when you want to fetch the latest release of Proton-GE
 
@@ -22,11 +22,16 @@ protonup-qt is basically just a version of protonup with a user interface that u
 
 to use protonup-qt, get it from your distro's repo, compile from source or [use the flatpak](https://flathub.org/apps/net.davidotek.pupgui2). Installation instructions can be found at [protonup-qt's github repo](https://github.com/DavidoTek/ProtonUp-Qt#install-from-aur-arch-manjaro-endeavouros-etc)
 
-Usage: - Look for the ProtonUp-Qt desktop item in your applications menu.
--Type `protonup-qt` into your terminal.
-Flatpak:
+Usage:
 
-- Look for the ProtonUp-Qt desktop item in your applications menu. - If you are using the flatpak, type `flatpak run net.davidotek.pupgui2` into your terminal.
+- Look for the ProtonUp-Qt desktop item in your applications menu.
+  -Type `protonup-qt` into your terminal.
+
+Flatpak usage:
+
+- Look for the ProtonUp-Qt desktop item in your applications menu.
+
+- If you are using the flatpak, type `flatpak run net.davidotek.pupgui2` into your terminal.
 
 then select `Steam` and click `Add version` and select `GE-Proton` under `Compatibility tool` to install Proton-GE
 
