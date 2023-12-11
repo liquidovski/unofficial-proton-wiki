@@ -46,4 +46,4 @@ This method should work for all custom proton builds, you simply need to put you
 
 ## DISCLAIMER ABOUT PROTON-GE
 
-USING CUSTOM PROTON BUILDS MAY RE-GENERATE YOUR PROTON PREFIX SO IT IS RECOMMENDED TO BACK UP YOUR [PREFIX]() BEFORE ATTEMPTING TO USE PROTON-GE OR ANY CUSTOM PROTON BUILDS OTHERWISE IT MAY LEAD TO SAVE DATA BEING LOST. (I have personally lost a 52 hr elden ring save because of this :( )
+USING CUSTOM PROTON BUILDS MAY RE-GENERATE YOUR PROTON PREFIX SO IT IS RECOMMENDED TO BACK UP YOUR [PREFIX](https://github.com/ardishco-the-great/common-proton-steps/blob/main/Terminology.md) BEFORE ATTEMPTING TO USE PROTON-GE OR ANY CUSTOM PROTON BUILDS OTHERWISE IT MAY LEAD TO SAVE DATA BEING LOST. (I have personally lost a 52 hr elden ring save because of this :( )
