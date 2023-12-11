@@ -30,7 +30,7 @@ Usage:
 
 - Look for the ProtonUp-Qt desktop item in your applications menu.
 
--Type `protonup-qt` into your terminal.
+- Type `protonup-qt` into your terminal.
 
 Flatpak usage:
 
