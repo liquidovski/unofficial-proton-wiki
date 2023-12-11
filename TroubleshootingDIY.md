@@ -1,3 +1,7 @@
+# What is this page?
+
+This page contains things you can do on your own when trying to troubleshoot a game running through Proton.
+
 # Try a different proton version
 
 At the time of writing, Proton 8.0-4 is the default proton version being used so when you click "PLAY" on a game on Steam, that version will be used. To override the default Proton version, Right-click on the game in your library, go to `Properties` then find the `Compatibility` tab, click that and select `Force the use of a specific Steam Play compatibility tool`, then select the proton release you want to use.
@@ -25,7 +29,8 @@ to use protonup-qt, get it from your distro's repo, compile from source or [use 
 Usage:
 
 - Look for the ProtonUp-Qt desktop item in your applications menu.
-  -Type `protonup-qt` into your terminal.
+
+-Type `protonup-qt` into your terminal.
 
 Flatpak usage:
 
