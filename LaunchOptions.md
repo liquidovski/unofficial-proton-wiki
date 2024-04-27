@@ -75,7 +75,7 @@ Debugging options are not useful outside of debugging purposes, so they have no 
   - `disable`: Disables the cache entirely.
   - `reset`: Clears the cache file.
 
--**DXVK_STATE_CACHE_PATH=/some/directory** Specifies a directory where to put the cache files. Defaults to the current working directory of the application.
+**DXVK_STATE_CACHE_PATH=/some/directory** Specifies a directory where to put the cache files. Defaults to the current working directory of the application.
 
 **VK_INSTANCE_LAYERS=VK_LAYER_KHRONOS_validation**: Enables Vulkan debug layers. Highly recommended for troubleshooting rendering issues and driver crashes. Requires the Vulkan SDK to be installed on the host system.
 
