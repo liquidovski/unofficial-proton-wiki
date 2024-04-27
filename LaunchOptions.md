@@ -4,7 +4,7 @@ A launch option or rather a launch flag, is a flag you pass to proton to change 
 
 In general definition:
 
-(Quoting [Quora](https://www.quora.com/What-is-a-flag-in-programming) )
+(Quoting [Quora](https://www.quora.com/What-is-a-flag-in-programming))
 "In programming, a flag is a variable or a value that acts as a signal for a certain condition or behavior. Flags are commonly used to control the flow of a program, to indicate the presence or absence of a feature, or to trigger specific actions based on certain conditions. For example, a flag variable could be used to indicate whether a certain option is enabled or disabled in a program."
 
 ## How to use a launch option
@@ -35,7 +35,7 @@ There are a lot of launch options and I am not sure If I can list them all here,
 
 **VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay**: Enables the Mesa HUD overlay. The Mesa HUD displays GPU name, driver version, FPS, and frametime *NOTE: (This HUD only works only with Vulkan games and games running through DXVK, and it only works with AMD and Intel GPUs)*.
 
-**DXVK_HUD=<option>**: Enables the DXVK HUD to display useful information like fps, frametime and et cetera. Only works with Games running with DXVK (or more familiarly, games running through the translation of DirectX9, DirectX10 and Direct11). Currently available `option`s are: 
+**DXVK_HUD=*option***: Enables the DXVK HUD to display useful information like fps, frametime and et cetera. Only works with Games running with DXVK (or more familiarly, games running through the translation of DirectX9, DirectX10 and Direct11). Currently available `option`s are: 
 - `devinfo`: Displays the name of the GPU and the driver version.
 - `fps`: Shows the current frame rate.
 - `frametimes`: Shows a frame time graph.
@@ -55,7 +55,7 @@ There are a lot of launch options and I am not sure If I can list them all here,
 
 Additionally, `DXVK_HUD=1` has the same effect as `DXVK_HUD=devinfo,fps`, and `DXVK_HUD=full` enables all available HUD elements.
 
-**DXVK_FRAME_RATE=<number>**: Limits the FPS to the amount specified in the `number` variable. A value of `0` uncaps the frame rate, while any positive value will limit rendering to the given number of frames per second. Alternatively, the configuration file can be used.
+**DXVK_FRAME_RATE=*number***: Limits the FPS to the amount specified in the `number` variable. A value of `0` uncaps the frame rate, while any positive value will limit rendering to the given number of frames per second. Alternatively, the configuration file can be used.
 
 ### Program specific options
 
@@ -71,11 +71,11 @@ These options are not exclusively related to Proton and **require the user to in
 
 Debugging options are not useful outside of debugging purposes, so they have no practical use for the average Proton user.
 
-**DXVK_STATE_CACHE=<option>**: DXVK caches pipeline state by default, so that shaders can be recompiled ahead of time on subsequent runs of an application, even if the driver's own shader cache got invalidated in the meantime. This cache is enabled by default, and generally reduces stuttering. Available valid ``option``s are: 
+**DXVK_STATE_CACHE=*option***: DXVK caches pipeline state by default, so that shaders can be recompiled ahead of time on subsequent runs of an application, even if the driver's own shader cache got invalidated in the meantime. This cache is enabled by default, and generally reduces stuttering. Available valid ``option``s are: 
   - `disable`: Disables the cache entirely.
   - `reset`: Clears the cache file.
 
--**DXVK_STATE_CACHE_PATH=<directory>** Specifies a directory where to put the cache files. Defaults to the current working directory of the application.
+-**DXVK_STATE_CACHE_PATH=/some/directory** Specifies a directory where to put the cache files. Defaults to the current working directory of the application.
 
 **VK_INSTANCE_LAYERS=VK_LAYER_KHRONOS_validation**: Enables Vulkan debug layers. Highly recommended for troubleshooting rendering issues and driver crashes. Requires the Vulkan SDK to be installed on the host system.
 
