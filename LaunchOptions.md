@@ -55,37 +55,37 @@ There are a lot of launch options and I am not sure If I can list them all here,
 
 Additionally, `DXVK_HUD=1` has the same effect as `DXVK_HUD=devinfo,fps`, and `DXVK_HUD=full` enables all available HUD elements.
 
-*DXVK_FRAME_RATE=<number>*: Limits the FPS to the amount specified in the `number` variable. A value of `0` uncaps the frame rate, while any positive value will limit rendering to the given number of frames per second. Alternatively, the configuration file can be used.
+**DXVK_FRAME_RATE=<number>**: Limits the FPS to the amount specified in the `number` variable. A value of `0` uncaps the frame rate, while any positive value will limit rendering to the given number of frames per second. Alternatively, the configuration file can be used.
 
 ### Program specific options
 
 These options are not exclusively related to Proton and **require the user to install the respective programs referenced in the launch option for them to function**. These options are referenced around forums and websites like [ProtonDB](https://www.protondb.com/) related to Proton.
 
-*mangohud*: Enables the MangoHud overlay. MangoHud is a Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more. Similar to [MSi Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) on Windows. Main repo: https://github.com/flightlessmango/MangoHud
+**mangohud**: Enables the MangoHud overlay. MangoHud is a Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more. Similar to [MSi Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) on Windows. Main repo: https://github.com/flightlessmango/MangoHud
 
-*ENABLE_VKBASALT=1*: Enables vkBasalt. vkBasalt is a vulkan post processing layer for linux. It is similar to ReShade. Main repo: https://github.com/DadSchoorse/vkBasalt
+**ENABLE_VKBASALT=1**: Enables vkBasalt. vkBasalt is a vulkan post processing layer for linux. It is similar to ReShade. Main repo: https://github.com/DadSchoorse/vkBasalt
 
-*gamemoderun*: Enables gamemode. `gamemode` is a program that "optimizes linux performance on demand". It does this by giving your CPU instructions to prioritize the processing of data from the specified program. This may lead to your desktop being slower while the game is running. Main repo: https://github.com/FeralInteractive/gamemode
+**gamemoderun**: Enables gamemode. `gamemode` is a program that "optimizes linux performance on demand". It does this by giving your CPU instructions to prioritize the processing of data from the specified program. This may lead to your desktop being slower while the game is running. Main repo: https://github.com/FeralInteractive/gamemode
 
 ### Debugging options
 
 Debugging options are not useful outside of debugging purposes, so they have no practical use for the average Proton user.
 
-*DXVK_STATE_CACHE=<option>*: DXVK caches pipeline state by default, so that shaders can be recompiled ahead of time on subsequent runs of an application, even if the driver's own shader cache got invalidated in the meantime. This cache is enabled by default, and generally reduces stuttering. Available valid ``option``s are: 
+**DXVK_STATE_CACHE=<option>**: DXVK caches pipeline state by default, so that shaders can be recompiled ahead of time on subsequent runs of an application, even if the driver's own shader cache got invalidated in the meantime. This cache is enabled by default, and generally reduces stuttering. Available valid ``option``s are: 
   - `disable`: Disables the cache entirely.
   - `reset`: Clears the cache file.
 
-*DXVK_STATE_CACHE_PATH=<directory>* Specifies a directory where to put the cache files. Defaults to the current working directory of the application.
+-**DXVK_STATE_CACHE_PATH=<directory>** Specifies a directory where to put the cache files. Defaults to the current working directory of the application.
 
-*VK_INSTANCE_LAYERS=VK_LAYER_KHRONOS_validation*: Enables Vulkan debug layers. Highly recommended for troubleshooting rendering issues and driver crashes. Requires the Vulkan SDK to be installed on the host system.
+**VK_INSTANCE_LAYERS=VK_LAYER_KHRONOS_validation**: Enables Vulkan debug layers. Highly recommended for troubleshooting rendering issues and driver crashes. Requires the Vulkan SDK to be installed on the host system.
 
-*DXVK_LOG_LEVEL=none|error|warn|info|debug*: Controls message logging.
+**DXVK_LOG_LEVEL=none|error|warn|info|debug**: Controls message logging.
 
-*DXVK_LOG_PATH=/some/directory*: Changes path where log files are stored. Set to `none` to disable log file creation entirely, without disabling logging.
+**DXVK_LOG_PATH=/some/directory**: Changes path where log files are stored. Set to `none` to disable log file creation entirely, without disabling logging.
 
-*DXVK_DEBUG=markers|validation*: Enables use of the `VK_EXT_debug_utils` extension for translating performance event markers, or to enable Vulkan validation, respecticely.
+**DXVK_DEBUG=markers|validation**: Enables use of the `VK_EXT_debug_utils` extension for translating performance event markers, or to enable Vulkan validation, respecticely.
 
-*DXVK_CONFIG_FILE=/xxx/dxvk.conf*: Sets path to the configuration file.
+**DXVK_CONFIG_FILE=/xxx/dxvk.conf**: Sets path to the configuration file.
 
-*DXVK_CONFIG="dxgi.hideAmdGpu = True; dxgi.syncInterval = 0"*: Can be used to set config variables through the environment instead of a configuration file using the same syntax. `;` is used as a seperator
+**DXVK_CONFIG="dxgi.hideAmdGpu = True; dxgi.syncInterval = 0"**: Can be used to set config variables through the environment instead of a configuration file using the same syntax. `;` is used as a seperator
 
