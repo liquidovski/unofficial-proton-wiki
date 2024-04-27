@@ -9,6 +9,7 @@ To work around this issue, go to your Steam Library, find `Steam Linux Runtime 3
 ## NTFS Read Error workaround
 
 **THERE HAS BEEN A REPORT THAT THIS MAY CAUSE DATA LOSS, DO THIS AT YOUR OWN RISK**
+
 Due to the nature of NTFS, creating files/folders with characters Windows cannot read will cause disk errors (leading to games that don't launch), the most common issue is a character in filenames that Proton creates on the NTFS disk.
 
 Fixing this is pretty simple. Create a symlink from the /compatdata folder on Linux to the mounted NTFS disk. In this example we will assume that your NTFS partition is mounted to /media/gamedisk/, please change it accordingly.
