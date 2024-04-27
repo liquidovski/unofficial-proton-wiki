@@ -19,7 +19,7 @@ There are a lot of launch options and I am not sure If I can list them all here,
 
 **PROTON_NO_ESYNC=1**: Turns off ESync.
 
-**PROTON_NO_FSYNC=1**: Turns off FSync
+**PROTON_NO_FSYNC=1**: Turns off FSync.
 
 **PROTON_NO_D3D11=1**: Disables DirectX11 (d3d11) for games that can fall back to DirectX9 (d3d9). The usecase for this is for older GPUs or to get better performance.*This will not work for all games, nor all games running with DirectX11.*
 
@@ -59,13 +59,33 @@ Additionally, `DXVK_HUD=1` has the same effect as `DXVK_HUD=devinfo,fps`, and `D
 
 ### Program specific options
 
-These options are not exclusively related to Proton and **require the user to install the respective programs referenced in the launch option for them to function**. These options are referenced around forums and websites like [ProtonDB](https://www.protondb.com/) related to Proton.
+These options are not exclusively related to Proton and **require the user to install the respective programs referenced in the launch option for them to function**. These options are included because they are referenced around forums and websites like [ProtonDB](https://www.protondb.com/) related to Proton.
 
-**mangohud**: Enables the MangoHud overlay. MangoHud is a Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more. Similar to [MSi Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) on Windows. Main repo: https://github.com/flightlessmango/MangoHud
+**mangohud**: Enables the MangoHud overlay. MangoHud is a Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more. Similar to [MSi Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) on Windows.
+repo: https://github.com/flightlessmango/MangoHud
 
 **ENABLE_VKBASALT=1**: Enables vkBasalt. vkBasalt is a vulkan post processing layer for linux. It is similar to ReShade. Main repo: https://github.com/DadSchoorse/vkBasalt
 
-**gamemoderun**: Enables gamemode. `gamemode` is a program that "optimizes linux performance on demand". It does this by giving your CPU instructions to prioritize the processing of data from the specified program. This may lead to your desktop being slower while the game is running. Main repo: https://github.com/FeralInteractive/gamemode
+**gamemoderun**: Enables gamemode. `gamemode` is a program that "optimizes linux performance on demand". It does this by giving your CPU instructions to prioritize the processing of data from the specified program. This may lead to your desktop being slower while the game is running.
+repo: https://github.com/FeralInteractive/gamemode
+
+**gamescope**: Enables gamescope. Gamescope is a nested X11 session or a "microcompositor". It can be used to work around some issues regarding XWayland mouse locking and similar issues. Flags can be passed to change around resolution or use upscaling. 
+
+Available flag/options are:
+
+- `-W`, `-H`: set the resolution used by gamescope. Resizing the gamescope window will update these settings. Ignored in embedded mode. If `-H` is specified but `-W` isn't, a 16:9 aspect ratio is assumed. Defaults to 1280×720.
+- `-w`, `-h`: set the resolution used by the game. If `-h` is specified but `-w` isn't, a 16:9 aspect ratio is assumed. Defaults to the values specified in `-W` and `-H`.
+- `-r`: set a frame-rate limit for the game. Specified in frames per second. Defaults to unlimited.
+- `-o`: set a frame-rate limit for the game when unfocused. Specified in frames per second. Defaults to unlimited.
+- `-F fsr`: use AMD FidelityFX™ Super Resolution 1.0 for upscaling
+- `-F nis`: use NVIDIA Image Scaling v1.0.3 for upscaling
+- `-S integer`: use integer scaling.
+- `-S stretch`: use stretch scaling, the game will fill the window. (e.g. 4:3 to 16:9)
+- `-b`: create a border-less window.
+- `-f`: create a full-screen window.
+
+Gamescope supports a subset of Reshade effects/shaders using the `--reshade-effect [path]` and `--reshade-technique-idx [idx]` command line parameters. 
+repo: https://github.com/ValveSoftware/gamescope
 
 ### Debugging options
 
@@ -89,3 +109,12 @@ Debugging options are not useful outside of debugging purposes, so they have no 
 
 **DXVK_CONFIG="dxgi.hideAmdGpu = True; dxgi.syncInterval = 0"**: Can be used to set config variables through the environment instead of a configuration file using the same syntax. `;` is used as a seperator
 
+### Examples
+
+If you want to turn off Esync, Fsync, and DXVK, you can combine all of them like this:
+
+```PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_USE_WINED3D=1 %command%```
+
+If you want to pass a game-specific flag along with Proton launch flags, you can (for example, for Dirty Bomb) do it like this:
+
+```PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_USE_WINED3D=1 %command% -dx11```
